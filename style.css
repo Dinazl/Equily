@@ -1,8 +1,47 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+    font-family: 'Segoe UI', sans-serif;
 }
+
+/* TITRES */
 h1 {
-    color: #0066cc;
-} 
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* CONTAINER */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* BOUTONS */
+.btn {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* INPUTS */
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* LABELS */
+.form-label {
+    font-weight: 500;
+    color: #555;
+}
+
+/* ESPACEMENT */
+form {
+    margin-top: 20px;
+}

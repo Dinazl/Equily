@@ -17,6 +17,17 @@ h1 {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
 /* BOUTONS */
 .btn {
     border-radius: 10px;
@@ -44,4 +55,23 @@ h1 {
 /* ESPACEMENT */
 form {
     margin-top: 20px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: #f0f0f0;
+    transform: scale(1.1);
 }

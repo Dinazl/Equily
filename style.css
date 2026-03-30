@@ -1,24 +1,22 @@
-/* RESET */
+/* ===== GLOBAL ===== */
 body {
     margin: 0;
+    padding: 20px;
     font-family: 'Segoe UI', sans-serif;
-}
-
-/* ===== DASHBOARD DARK MODE ===== */
-
-body {
-    background:black;
+    background: #0d0d0d;
     color: white;
 }
 
-/* SIDEBAR */
+/* ===== SIDEBAR ===== */
 .sidebar {
     width: 250px;
-    height: 100vh;
+    height: calc(100vh - 40px);
     background: #111;
     position: fixed;
-    left: 0;
-    top: 0;
+    top: 20px;
+    left: 20px;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .logo {
@@ -26,13 +24,16 @@ body {
     margin-bottom: 30px;
 }
 
+/* ===== MENU ===== */
 .menu-item {
     display: block;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     margin-bottom: 10px;
     cursor: pointer;
     color: white;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 .menu-item:hover {
@@ -40,30 +41,43 @@ body {
 }
 
 .menu-item.active {
-    background: #6c5ce7;
+    background: linear-gradient(90deg, #6c5ce7, #8e7dff);
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
 .content {
-    margin-left: 250px;
+    margin-left: 290px;
+    padding: 30px;
 }
 
-/* CARTE PRINCIPALE */
+/* ===== TITRES ===== */
+h1 {
+    margin-bottom: 10px;
+}
+
+/* ===== CARTE PRINCIPALE ===== */
 .card-main {
-    background: #0f2f1f;
+    background: linear-gradient(135deg, #0f2f1f, #0a3a2a);
     border: 1px solid #00ff88;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
 }
 
-/* PETITES CARDS */
+/* ===== STATS (les 3 blocs) ===== */
 .small-card {
     background: #111;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
+    border: 1px solid #222;
+    transition: 0.2s;
 }
 
-/* GROUPES */
+.small-card:hover {
+    transform: translateY(-5px);
+    border-color: #6c5ce7;
+}
+
+/* ===== GROUPES ===== */
 .group-card {
     background: #111;
     border-radius: 15px;
@@ -77,9 +91,11 @@ body {
 
 .group-card img {
     width: 100%;
+    height: 160px;
+    object-fit: cover;
 }
 
-/* COULEURS */
+/* ===== COULEURS ===== */
 .text-success {
     color: #00ff88 !important;
 }
@@ -88,68 +104,12 @@ body {
     color: #ff4d4d !important;
 }
 
-/* ===== FORMS (style clair) ===== */
-
-.container {
-    background: white;
-    color: black;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* BOUTONS */
-.btn {
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-}
-
-/* INPUTS */
-.form-control, .form-select {
-    border-radius: 10px;
-    padding: 10px;
-}
-
-/* LABELS */
-.form-label {
-    font-weight: 500;
-    color: #555;
-}
-
-/* ESPACEMENT */
-form {
-    margin-top: 20px;
-}
-
-/* FLECHE RETOUR */
-.back-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 26px;
-    color: #333;
-    text-decoration: none;
-    background: white;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.2s;
-}
-
-.back-btn:hover {
-    background: #f0f0f0;
-    transform: scale(1.1);
-}
-
 /* ===== RESPONSIVE ===== */
-
 @media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
 
     .sidebar {
         display: none;
@@ -157,14 +117,6 @@ form {
 
     .content {
         margin-left: 0;
-    }
-
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        margin: 0;
-        max-width: 100%;
+        padding: 15px;
     }
 }

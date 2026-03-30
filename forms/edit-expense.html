@@ -26,15 +26,15 @@
 <div class="container mt-5">
     <h1 class="mb-4">Modifier une dépense</h1>
 
-    <!-- ✅ action + method -->
+    <!-- action + method -->
     <form id="editForm" action="#" method="POST">
 
         <!-- TITRE -->
         <div class="mb-3">
-            <!-- ✅ label lié -->
+            <!-- label lié -->
             <label for="title" class="form-label">Titre</label>
 
-            <!-- ✅ id + name -->
+            <!-- id + name -->
             <input 
                 type="text" 
                 id="title" 
@@ -59,7 +59,7 @@
                 required>
         </div>
 
-        <!-- BONUS PRO (fortement recommandé) -->
+        <!-- BONUS -->
         <div class="mb-3">
             <label for="payer" class="form-label">Payé par</label>
 
@@ -98,7 +98,7 @@
 document.getElementById("editForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    // ✅ récupération propre
+    //récupération propre
     const data = {
         title: document.getElementById("title").value,
         amount: document.getElementById("amount").value,

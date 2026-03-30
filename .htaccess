@@ -1,3 +1,12 @@
 <IfModule mod_headers.c>
-Header set Content-Security-Policy "default-src 'self'; base-uri 'self'; connect-src 'self'; frame-src 'self'; frame-ancestors 'self'; font-src 'self' https://cdn.jsdelivr.net; form-action 'self'; img-src 'self' data: https://picsum.photos; script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';"
+Header set Content-Security-Policy "default-src 'self';\
+ base-uri 'self';\
+ connect-src 'self';\
+ frame-src 'self';\
+ frame-ancestors 'self';\
+ font-src 'self' https://cdn.jsdelivr.net;\
+ form-action 'self';\
+ img-src 'self' data: https://picsum.photos;\
+ script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';\
+ style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';"
 </IfModule>

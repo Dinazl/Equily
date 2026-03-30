@@ -31,10 +31,10 @@
 
         <!-- TITRE -->
         <div class="mb-3">
-            <!-- ✅ label lié à input -->
+            <!-- label lié à input -->
             <label for="title" class="form-label">Titre</label>
 
-            <!-- ✅ id + name -->
+            <!-- id + name -->
             <input 
                 type="text" 
                 id="title" 
@@ -46,7 +46,7 @@
 
         <!-- MONTANT -->
         <div class="mb-3">
-            <!-- ✅ lien label/input -->
+            <!--  lien label/input -->
             <label for="amount" class="form-label">Montant (€)</label>
 
             <input 
@@ -100,7 +100,7 @@
 document.getElementById("addForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    // ✅ récupération propre des valeurs
+    // récupération propre des valeurs
     const data = {
         title: document.getElementById("title").value,
         amount: document.getElementById("amount").value,

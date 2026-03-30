@@ -1,5 +1,5 @@
 <IfModule mod_headers.c>
-Header set Content-Security-Policy "default-src 'self';\
+Header always set Content-Security-Policy "default-src 'self';\
  base-uri 'self';\
  connect-src 'self';\
  frame-src 'self';\

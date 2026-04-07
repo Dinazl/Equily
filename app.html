@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equily App</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body class="app">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <h3 class="logo">💸 Equily</h3>
+
+    <div class="menu-item active" onclick="showPage('addPage', this)">Ajouter</div>
+    <div class="menu-item" onclick="showPage('editPage', this)">Modifier</div>
+    <div class="menu-item" onclick="showPage('groupPage', this)">Groupes</div>
+
+    <button class="toggle-btn" onclick="toggleTheme()">
+        🌙 / ☀️ Mode
+    </button>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+<!-- ADD -->
+<div id="addPage" class="page">
+<h1>Ajouter une dépense</h1>
+
+<form action="#" method="post">
+
+<div class="mb-3">
+<label for="add_title">Titre</label>
+<input type="text" id="add_title" name="title" class="form-control" placeholder="Ex: Restaurant" required>
+</div>
+
+<div class="mb-3">
+<label for="add_amount">Montant</label>
+<input type="number" id="add_amount" name="amount" class="form-control" placeholder="Ex: 50" required>
+</div>
+
+<div class="mb-3">
+<label for="add_payer">Payé par</label>
+<input type="text" id="add_payer" name="payer" class="form-control" placeholder="Ex: Zak">
+</div>
+
+<div class="mb-3">
+<label for="add_group">Groupe</label>
+<select id="add_group" name="group" class="form-select" required>
+<option value="">-- Choisir un groupe --</option>
+<option>Coloc</option>
+<option>Vacances</option>
+</select>
+</div>
+
+<button class="btn btn-primary">Ajouter</button>
+</form>
+</div>
+
+<!-- EDIT -->
+<div id="editPage" class="page" style="display:none;">
+<h1>Modifier une dépense</h1>
+
+<form action="#" method="post">
+
+<div class="mb-3">
+<label for="edit_title">Titre</label>
+<input type="text" id="edit_title" name="title" class="form-control" placeholder="Ex: Restaurant">
+</div>
+
+<div class="mb-3">
+<label for="edit_amount">Montant</label>
+<input type="number" id="edit_amount" name="amount" class="form-control" placeholder="Ex: 67">
+</div>
+
+<div class="mb-3">
+<label for="edit_payer">Payé par</label>
+<input type="text" id="edit_payer" name="payer" class="form-control" placeholder="Ex: Dina">
+</div>
+
+<div class="mb-3">
+<label for="edit_group">Groupe</label>
+<select id="edit_group" name="group" class="form-select">
+<option>Coloc</option>
+<option>Vacances</option>
+</select>
+</div>
+
+<button class="btn btn-warning">Modifier</button>
+</form>
+</div>
+
+<!-- GROUP -->
+<div id="groupPage" class="page" style="display:none;">
+<h1>Choisir un groupe</h1>
+
+<form action="#" method="post">
+
+<div class="mb-3">
+<label for="group_select">Groupe</label>
+<select id="group_select" name="group" class="form-select" required>
+<option value="">-- Choisir un groupe --</option>
+<option>Coloc</option>
+<option>Vacances</option>
+<option>Anniversaire</option>
+</select>
+</div>
+
+<button class="btn btn-success">Valider</button>
+</form>
+</div>
+
+</div>
+
+<!-- JS -->
+<script src="app.js"></script>
+
+</body>
+</html>

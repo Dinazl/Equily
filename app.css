@@ -1,0 +1,154 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+    --bg: #f9fafc;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --primary: #7c3aed;
+}
+
+body.dark {
+    --bg: #0f0f1a;
+    --card: #1a1a2e;
+    --text: #ffffff;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI';
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, #7c3aed, #4f46e5);
+    position: fixed;
+    padding: 30px;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* ===== MENU ===== */
+.menu-item {
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.menu-item.active {
+    background: white;
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+/* ===== TOGGLE ===== */
+.toggle-btn {
+    margin-top: auto;
+    background: white;
+    color: #4f46e5;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    margin-left: 300px;
+    padding: 50px;
+}
+
+/* ===== CARD ===== */
+.page {
+    background: var(--card);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    max-width: 600px;
+}
+
+/* ===== TITRES ===== */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* ===== INPUT ===== */
+.form-control, .form-select {
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg,#7c3aed,#4f46e5);
+    border: none;
+}
+
+.btn-warning {
+    background: orange;
+    border: none;
+}
+
+.btn-success {
+    background: #00c896;
+    border: none;
+}
+
+/* ===== DARK MODE ===== */
+body.dark .sidebar {
+    background: linear-gradient(180deg, #1a1a2e, #0f0f1a);
+}
+
+body.dark .menu-item.active {
+    background: #7c3aed;
+    color: white;
+}
+
+body.dark .toggle-btn {
+    background: #7c3aed;
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .sidebar{display:none;}
+    .content{margin-left:0;}
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+body.dark .form-control::placeholder {
+    color: #aaa;
+}
